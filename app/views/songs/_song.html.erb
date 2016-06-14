@@ -1,0 +1,18 @@
+<div class="novel-item">
+
+   <div class="inline cover">
+      <img class="small-cover" src="<%= song.cover %>"/>
+   </div>
+
+   <div class="inline details">
+
+      <h3><%= link_to song.title, song %></h3>
+      <% if !defined?(hide_artist) || !hide_artist %>
+               <h4><%= link_to song.artist.name, song.artist %></h4>
+           <% end %>
+      <p><%= song.year %></p>
+      <p><%= song.lyrics %></p>
+
+   </div>
+
+</div>

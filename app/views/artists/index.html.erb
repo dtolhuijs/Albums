@@ -1,0 +1,6 @@
+<h1>Artists</h1>
+
+<% @artists.each do |artist| %>
+    <p><%= link_to artist.name, artist %></p>
+<% end %>
+<h1><%= link_to "New Artist", new_artist_path, class: "btn btn-default", style: "float: right" %></h1>

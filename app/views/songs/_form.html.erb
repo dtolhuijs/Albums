@@ -1,0 +1,27 @@
+<%= form_for @song do |f| %>
+
+    <%= f.hidden_field :artist_id, :value => @song.artist.id%>
+
+    <div class="form-group">
+       <%= f.label :title %>
+       <%= f.text_field :title, class: "form-control", placeholder: ". . ." %>
+    </div>
+
+    <div class="form-group">
+       <%= f.label :year %>
+       <%= f.text_field :year, class: "form-control", placeholder: ". . ."   %>
+    </div>
+
+    <div class="form-group">
+       <%= f.label :cover %>
+       <%= f.text_field :cover, class: "form-control", placeholder: "url . . ."   %>
+    </div>
+
+    <div class="form-group">
+       <%= f.label :lyrics %>
+       <%= f.text_area :lyrics, class: "form-control", rows: 6  %>
+    </div>
+
+    <%= f.submit (@song.new_record? ? "Create" : "Update"), class: "form-control btn-primary" %>
+
+<% end %>
